@@ -6,8 +6,7 @@ import connectDb from "./config/db.js"
 import blogRoute from "./routes/blogRoute.js"
 
 
-dotenv.config
-()
+dotenv.config()
 const app=express()
 
 connectDb()
