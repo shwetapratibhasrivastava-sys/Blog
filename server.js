@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import connectDb from "./config/db.js"
 import blogRoute from "./routes/blogRoute.js"
+import authRoute from "./routes/authRoute.js"
 
 
 dotenv.config()
@@ -19,6 +20,7 @@ app.get("/",(req,res)=>{
     res.send("Api is running")
 })
 app.use("/api/blog",blogRoute)
+app.use("/api/auth",authRoute)
 
 const PORT=process.env.PORT||3000
 
