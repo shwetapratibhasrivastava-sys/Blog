@@ -45,6 +45,11 @@ export const login=async(req,res)=>{
             data:exisitingUser
      })
      }
+     else{
+        return res.json({
+            message:"Incorrect Password"
+        })
+     }
    
     } catch (error) {
         res.json({
