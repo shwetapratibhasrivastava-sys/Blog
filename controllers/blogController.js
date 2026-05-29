@@ -30,10 +30,10 @@ export const createBlog = async (req, res) => {
       message: error.message,
     });
   }
-}; // ✅ IMPORTANT: function closed here
+}; 
 
 
-// ✅ Now separate functions
+
 export const getBlog = async (req, res) => {
   try {
     const blog = await Blog.find();
